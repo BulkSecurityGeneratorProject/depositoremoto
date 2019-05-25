@@ -235,6 +235,9 @@ public class CacheConfiguration {
             registerPredefinedCache(ar.com.cac.deposito.remoto.domain.User.class.getName() + ".authorities", new JCache<Object, Object>(
                 cacheManager.getCache(ar.com.cac.deposito.remoto.domain.User.class.getName() + ".authorities").getAdvancedCache(), this,
                 ConfigurationAdapter.create()));
+            registerPredefinedCache(ar.com.cac.deposito.remoto.domain.Banco.class.getName(), new JCache<Object, Object>(
+                cacheManager.getCache(ar.com.cac.deposito.remoto.domain.Banco.class.getName()).getAdvancedCache(), this,
+                ConfigurationAdapter.create()));
             // jhipster-needle-infinispan-add-entry
             if (jHipsterProperties.getCache().getInfinispan().isStatsEnabled()) {
                 for (String cacheName : cacheManager.getCacheNames()) {
