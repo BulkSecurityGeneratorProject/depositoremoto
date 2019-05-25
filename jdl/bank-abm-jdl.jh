@@ -1,0 +1,13 @@
+entity Banco {
+	nombreDeFantasia String
+    numero Integer
+    razonSocial String
+    Cuit String
+    OtrosDatos String
+    activo Boolean
+    diferidos Acepta
+}
+
+enum Acepta {
+    NO, SI
+}

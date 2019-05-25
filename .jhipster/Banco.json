@@ -1,0 +1,44 @@
+{
+    "name": "Banco",
+    "fields": [
+        {
+            "fieldName": "nombreDeFantasia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numero",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "razonSocial",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cuit",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "otrosDatos",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "activo",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "diferidos",
+            "fieldType": "Acepta",
+            "fieldValues": "NO,SI"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190525020710",
+    "entityTableName": "banco",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

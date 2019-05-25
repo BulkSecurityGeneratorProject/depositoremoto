@@ -1,0 +1,61 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-banco-heading">Create or edit a Banco</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!banco.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_nombreDeFantasia">Nombre De Fantasia</label>
+                    <input type="text" class="form-control" name="nombreDeFantasia" id="field_nombreDeFantasia"
+                           formControlName="nombreDeFantasia"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_numero">Numero</label>
+                    <input type="number" class="form-control" name="numero" id="field_numero"
+                           formControlName="numero"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_razonSocial">Razon Social</label>
+                    <input type="text" class="form-control" name="razonSocial" id="field_razonSocial"
+                           formControlName="razonSocial"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_cuit">Cuit</label>
+                    <input type="text" class="form-control" name="cuit" id="field_cuit"
+                           formControlName="cuit"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_otrosDatos">Otros Datos</label>
+                    <input type="text" class="form-control" name="otrosDatos" id="field_otrosDatos"
+                           formControlName="otrosDatos"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_activo">Activo</label>
+                    <input type="checkbox" class="form-control" name="activo" id="field_activo"
+                           formControlName="activo"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_diferidos">Diferidos</label>
+                    <select class="form-control" name="diferidos" formControlName="diferidos" id="field_diferidos">
+                        <option value="NO">NO</option>
+                        <option value="SI">SI</option>
+                    </select>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
